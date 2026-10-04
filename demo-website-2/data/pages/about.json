@@ -1,0 +1,25 @@
+{
+  "header": {
+    "title": "About Northstar Digital",
+    "description": "We are a team of passionate digital experts dedicated to your success."
+  },
+  "mission": {
+    "title": "Our Mission",
+    "description": "To empower businesses with the tools and strategies they need to thrive in the digital age."
+  },
+  "team": {
+    "title": "Leadership",
+    "members": [
+      {
+        "name": "Jane Doe",
+        "role": "CEO & Founder",
+        "bio": "15+ years of experience in digital strategy and business development."
+      },
+      {
+        "name": "John Smith",
+        "role": "CTO",
+        "bio": "Expert in scalable architectures and modern web technologies."
+      }
+    ]
+  }
+}

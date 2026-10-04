@@ -1,0 +1,20 @@
+{
+  "hero": {
+    "title": "Grow Your Business",
+    "description": "Digital solutions for modern businesses.",
+    "buttonText": "Get Started",
+    "buttonHref": "/contact"
+  },
+  "trusted": {
+    "title": "Trusted by innovative companies",
+    "companies": ["Acme Corp", "Global Tech", "Starlight Industries"]
+  },
+  "servicesPreview": {
+    "title": "What We Do",
+    "description": "Comprehensive digital services to scale your operations."
+  },
+  "cta": {
+    "title": "Ready to grow?",
+    "buttonText": "Contact Us"
+  }
+}

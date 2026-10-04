@@ -1,0 +1,15 @@
+{
+  "header": {
+    "title": "Contact Us",
+    "description": "Get in touch with our team to start your next big project."
+  },
+  "info": {
+    "address": "123 Innovation Drive, Tech City, TC 10101",
+    "email": "hello@northstardigital.demo",
+    "phone": "+1 (555) 123-4567"
+  },
+  "form": {
+    "title": "Send us a message",
+    "submitText": "Send Message"
+  }
+}

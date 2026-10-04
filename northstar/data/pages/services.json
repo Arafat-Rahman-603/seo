@@ -1,0 +1,27 @@
+{
+  "header": {
+    "title": "Our Services",
+    "description": "We offer a full suite of digital solutions tailored to your specific needs."
+  },
+  "services": [
+    {
+      "id": "web",
+      "title": "Web Development",
+      "description": "Modern websites and web applications built with cutting-edge technologies."
+    },
+    {
+      "id": "seo",
+      "title": "Search Engine Optimization",
+      "description": "Search-focused optimization for growing businesses. Dominate the rankings."
+    },
+    {
+      "id": "marketing",
+      "title": "Digital Marketing",
+      "description": "Data-driven marketing strategies to increase your reach and conversion."
+    }
+  ],
+  "cta": {
+    "title": "Need a custom solution?",
+    "buttonText": "Let's Talk"
+  }
+}
