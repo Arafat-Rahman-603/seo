@@ -4,12 +4,23 @@
     "description": "Get in touch with our team to start your next big project."
   },
   "info": {
+    "title": "Contact Information",
+    "addressLabel": "Address",
     "address": "123 Innovation Drive, Tech City, TC 10101",
+    "emailLabel": "Email",
     "email": "hello@northstardigital.demo",
+    "phoneLabel": "Phone",
     "phone": "+1 (555) 123-4567"
   },
   "form": {
     "title": "Send us a message",
-    "submitText": "Send Message"
+    "nameLabel": "Name",
+    "namePlaceholder": "Jane Doe",
+    "emailLabel": "Email",
+    "emailPlaceholder": "jane@example.com",
+    "messageLabel": "Message",
+    "messagePlaceholder": "How can we help you?",
+    "submitText": "Send Message",
+    "successMessage": "Thank you! Your message has been received. We will get back to you shortly."
   }
 }

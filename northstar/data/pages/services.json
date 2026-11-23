@@ -22,6 +22,7 @@
   ],
   "cta": {
     "title": "Need a custom solution?",
-    "buttonText": "Let's Talk"
+    "buttonText": "Let's Talk",
+    "buttonHref": "/contact"
   }
 }

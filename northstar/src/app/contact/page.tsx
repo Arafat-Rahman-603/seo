@@ -1,22 +1,27 @@
 import { fetchResolvedContent, fetchSeoData } from '@/lib/api';
-import { constructMetadata } from '@/lib/seo';
+import { constructMetadata, serializeJsonLd } from '@/lib/seo';
 import ContactContent from '@/components/ContactContent';
+
+export const dynamic = 'force-dynamic';
 
 export async function generateMetadata() {
   const seo = await fetchSeoData('contact');
-  return constructMetadata(seo);
+  return constructMetadata(seo, 'contact');
 }
 
 export default async function ContactPage() {
-  const content = await fetchResolvedContent('contact');
-  const seo = await fetchSeoData('contact');
+  const [content, seo] = await Promise.all([
+    fetchResolvedContent('contact'),
+    fetchSeoData('contact'),
+  ]);
+  const jsonLd = serializeJsonLd(seo?.jsonLd);
 
   return (
     <>
-      {seo?.jsonLd && (
-        <script 
-          type="application/ld+json" 
-          dangerouslySetInnerHTML={{ __html: seo.jsonLd }} 
+      {jsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: jsonLd }}
         />
       )}
       <ContactContent content={content} />

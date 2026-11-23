@@ -1,27 +1,26 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import SiteShell from "@/components/SiteShell";
+import { fetchResolvedContent } from "@/lib/api";
 
-const inter = Inter({ subsets: ["latin"] });
+export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: "Northstar Digital",
   description: "Digital solutions for modern businesses",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const layoutContent = await fetchResolvedContent("layout");
+
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <Navbar />
-        {children}
-        <Footer />
+      <body className="font-sans antialiased bg-white text-gray-900">
+        <SiteShell layoutContent={layoutContent}>{children}</SiteShell>
       </body>
     </html>
   );

@@ -1,0 +1,20 @@
+{
+  "navbar": {
+    "brandText": "Northstar Digital",
+    "homeLabel": "Home",
+    "servicesLabel": "Services",
+    "aboutLabel": "About",
+    "contactLabel": "Contact",
+    "ctaText": "Get Started",
+    "ctaHref": "/contact"
+  },
+  "footer": {
+    "brandText": "Northstar Digital",
+    "copyrightText": "© 2026 Northstar Digital. All rights reserved.",
+    "homeLabel": "Home",
+    "servicesLabel": "Services",
+    "aboutLabel": "About",
+    "contactLabel": "Contact",
+    "previewLabel": "Preview Editor"
+  }
+}

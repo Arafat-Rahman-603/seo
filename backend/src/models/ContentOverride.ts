@@ -10,5 +10,5 @@ const ContentOverrideSchema = new mongoose.Schema({
 // Ensure uniqueness per project/page/path
 ContentOverrideSchema.index({ projectId: 1, page: 1, path: 1 }, { unique: true });
 
-import { runtimeDb } from '../config/db';
-export default runtimeDb.model('ContentOverride', ContentOverrideSchema);
+import { adminDb } from '../config/db';
+export default adminDb.model('ContentOverride', ContentOverrideSchema);

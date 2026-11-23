@@ -11,10 +11,13 @@
   },
   "servicesPreview": {
     "title": "What We Do",
-    "description": "Comprehensive digital services to scale your operations."
+    "description": "Comprehensive digital services to scale your operations.",
+    "linkText": "Explore our services →",
+    "linkHref": "/services"
   },
   "cta": {
     "title": "Ready to grow?",
-    "buttonText": "Contact Us"
+    "buttonText": "Contact Us",
+    "buttonHref": "/contact"
   }
 }

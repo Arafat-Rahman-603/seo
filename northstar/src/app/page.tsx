@@ -1,22 +1,27 @@
 import { fetchResolvedContent, fetchSeoData } from '@/lib/api';
-import { constructMetadata } from '@/lib/seo';
+import { constructMetadata, serializeJsonLd } from '@/lib/seo';
 import HomeContent from '@/components/HomeContent';
+
+export const dynamic = 'force-dynamic';
 
 export async function generateMetadata() {
   const seo = await fetchSeoData('home');
-  return constructMetadata(seo);
+  return constructMetadata(seo, 'home');
 }
 
 export default async function HomePage() {
-  const content = await fetchResolvedContent('home');
-  const seo = await fetchSeoData('home');
+  const [content, seo] = await Promise.all([
+    fetchResolvedContent('home'),
+    fetchSeoData('home'),
+  ]);
+  const jsonLd = serializeJsonLd(seo?.jsonLd);
 
   return (
     <>
-      {seo?.jsonLd && (
-        <script 
-          type="application/ld+json" 
-          dangerouslySetInnerHTML={{ __html: seo.jsonLd }} 
+      {jsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: jsonLd }}
         />
       )}
       <HomeContent content={content} />

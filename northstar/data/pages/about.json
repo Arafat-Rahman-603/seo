@@ -5,7 +5,10 @@
   },
   "mission": {
     "title": "Our Mission",
-    "description": "To empower businesses with the tools and strategies they need to thrive in the digital age."
+    "description": "To empower businesses with the tools and strategies they need to thrive in the digital age.",
+    "badge": "Northstar Digital",
+    "tagline": "Strategy • Engineering • Growth",
+    "imageUrl": ""
   },
   "team": {
     "title": "Leadership",
