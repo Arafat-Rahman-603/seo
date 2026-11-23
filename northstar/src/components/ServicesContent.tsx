@@ -10,14 +10,14 @@ export default function ServicesContent({ content }: { content: any }) {
           <h1 
             className="text-4xl font-bold text-gray-900 sm:text-5xl"
             data-editor-field="title"
-            data-editor-path="header.title"
+            data-editor-path="header.title" data-editor-type="text"
           >
             {content.header.title}
           </h1>
           <p 
             className="mt-6 text-lg text-gray-600 max-w-2xl mx-auto"
             data-editor-field="description"
-            data-editor-path="header.description"
+            data-editor-path="header.description" data-editor-type="textarea"
           >
             {content.header.description}
           </p>
@@ -48,7 +48,7 @@ export default function ServicesContent({ content }: { content: any }) {
           <h2 
             className="text-2xl font-bold text-gray-900 mb-6"
             data-editor-field="title"
-            data-editor-path="cta.title"
+            data-editor-path="cta.title" data-editor-type="text"
           >
             {content.cta.title}
           </h2>
@@ -56,7 +56,7 @@ export default function ServicesContent({ content }: { content: any }) {
             href="/contact" 
             className="bg-black text-white px-6 py-3 text-sm font-semibold hover:bg-gray-800"
             data-editor-field="buttonText"
-            data-editor-path="cta.buttonText"
+            data-editor-path="cta.buttonText" data-editor-type="text"
           >
             {content.cta.buttonText}
           </Link>

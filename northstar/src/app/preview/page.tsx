@@ -9,8 +9,8 @@ export default function PreviewPage() {
   const [loading, setLoading] = useState(true);
   const [user, setUser] = useState<any>(null);
   
-  const [email, setEmail] = useState('admin@demo.com');
-  const [password, setPassword] = useState('password123');
+  const [email, setEmail] = useState('admin@example.com');
+  const [password, setPassword] = useState('admin123');
   const [loginError, setLoginError] = useState('');
 
   const checkAuth = async () => {
@@ -69,7 +69,7 @@ export default function PreviewPage() {
                 type="email" 
                 value={email} 
                 onChange={e => setEmail(e.target.value)} 
-                className="w-full border border-gray-300 p-2 text-sm"
+                className="w-full border border-gray-300 bg-white text-gray-900 p-2 text-sm"
                 required
               />
             </div>
@@ -79,7 +79,7 @@ export default function PreviewPage() {
                 type="password" 
                 value={password} 
                 onChange={e => setPassword(e.target.value)} 
-                className="w-full border border-gray-300 p-2 text-sm"
+                className="w-full border border-gray-300 bg-white text-gray-900 p-2 text-sm"
                 required
               />
             </div>

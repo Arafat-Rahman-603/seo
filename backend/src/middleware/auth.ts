@@ -37,7 +37,13 @@ export const requireProjectAccess = async (req: AuthRequest, res: Response, next
        return res.status(400).json({ success: false, code: 'BAD_REQUEST', message: 'Project ID is required' });
     }
     const membership = await Membership.findOne({ userId: req.user._id, projectId: id });
+    
     if (!membership) {
+      if (req.user.role === 'ADMIN') {
+        req.projectRole = 'ADMIN';
+        req.projectId = id;
+        return next();
+      }
       return res.status(403).json({ success: false, code: 'FORBIDDEN', message: 'You do not have access to this project.' });
     }
     

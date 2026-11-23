@@ -9,14 +9,14 @@ export default function AboutContent({ content }: { content: any }) {
           <h1 
             className="text-4xl font-bold text-gray-900 sm:text-5xl mb-6"
             data-editor-field="title"
-            data-editor-path="header.title"
+            data-editor-path="header.title" data-editor-type="text"
           >
             {content.header.title}
           </h1>
           <p 
             className="text-xl text-gray-600 max-w-3xl leading-relaxed"
             data-editor-field="description"
-            data-editor-path="header.description"
+            data-editor-path="header.description" data-editor-type="textarea"
           >
             {content.header.description}
           </p>
@@ -27,14 +27,14 @@ export default function AboutContent({ content }: { content: any }) {
             <h2 
               className="text-3xl font-bold text-gray-900 mb-6"
               data-editor-field="title"
-              data-editor-path="mission.title"
+              data-editor-path="mission.title" data-editor-type="text"
             >
               {content.mission.title}
             </h2>
             <p 
               className="text-lg text-gray-600"
               data-editor-field="description"
-              data-editor-path="mission.description"
+              data-editor-path="mission.description" data-editor-type="textarea"
             >
               {content.mission.description}
             </p>
@@ -48,7 +48,7 @@ export default function AboutContent({ content }: { content: any }) {
           <h2 
             className="text-3xl font-bold text-gray-900 mb-12 text-center"
             data-editor-field="title"
-            data-editor-path="team.title"
+            data-editor-path="team.title" data-editor-type="text"
           >
             {content.team.title}
           </h2>

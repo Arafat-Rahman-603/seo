@@ -1,3 +1,5 @@
+"use client";
+
 export default function ContactContent({ content }: { content: any }) {
   if (!content) return null;
 
@@ -9,14 +11,14 @@ export default function ContactContent({ content }: { content: any }) {
           <h1 
             className="text-4xl font-bold text-gray-900 sm:text-5xl mb-6"
             data-editor-field="title"
-            data-editor-path="header.title"
+            data-editor-path="header.title" data-editor-type="text"
           >
             {content.header.title}
           </h1>
           <p 
             className="text-xl text-gray-600 max-w-3xl mx-auto"
             data-editor-field="description"
-            data-editor-path="header.description"
+            data-editor-path="header.description" data-editor-type="textarea"
           >
             {content.header.description}
           </p>
@@ -28,15 +30,15 @@ export default function ContactContent({ content }: { content: any }) {
             <div className="space-y-6 text-lg text-gray-600">
               <div>
                 <strong className="block text-gray-900 text-sm uppercase tracking-wide mb-1">Address</strong>
-                <span data-editor-field="address" data-editor-path="info.address">{content.info.address}</span>
+                <span data-editor-field="address" data-editor-path="info.address" data-editor-type="text">{content.info.address}</span>
               </div>
               <div>
                 <strong className="block text-gray-900 text-sm uppercase tracking-wide mb-1">Email</strong>
-                <span data-editor-field="email" data-editor-path="info.email">{content.info.email}</span>
+                <span data-editor-field="email" data-editor-path="info.email" data-editor-type="text">{content.info.email}</span>
               </div>
               <div>
                 <strong className="block text-gray-900 text-sm uppercase tracking-wide mb-1">Phone</strong>
-                <span data-editor-field="phone" data-editor-path="info.phone">{content.info.phone}</span>
+                <span data-editor-field="phone" data-editor-path="info.phone" data-editor-type="text">{content.info.phone}</span>
               </div>
             </div>
           </div>
@@ -45,7 +47,7 @@ export default function ContactContent({ content }: { content: any }) {
             <h2 
               className="text-2xl font-bold text-gray-900 mb-8"
               data-editor-field="title"
-              data-editor-path="form.title"
+              data-editor-path="form.title" data-editor-type="text"
             >
               {content.form.title}
             </h2>
@@ -66,7 +68,7 @@ export default function ContactContent({ content }: { content: any }) {
                 type="button" 
                 className="w-full bg-black text-white p-4 font-bold hover:bg-gray-800"
                 data-editor-field="submitText"
-                data-editor-path="form.submitText"
+                data-editor-path="form.submitText" data-editor-type="text"
               >
                 {content.form.submitText}
               </button>
